@@ -1,1 +1,168 @@
+//Task-2
+var i=2,n=10;
+while(i<=n){
+    if(i%2==0){
+        console.log(i);
+    }
+    i++;
+}
 
+//Task-3
+var i=1,n=49;
+while(i*i<=n){
+    console.log(i*i);
+    i++;
+}
+
+//Task-4
+var i=1,n=7;
+while(i<=n){
+    if(i%5==0){
+        i++;
+        continue;
+    }
+    console.log(i);
+    i++;
+}
+
+//Task-5
+var n=153;
+while(n!==0){
+    var rem=n%10;
+    console.log(rem);
+    n=Math.floor(n/10);
+}
+
+//Task-6
+var n=123;
+var sum=n,count=0;
+while(n!==0){
+    var rem=n%10;
+    count=count+(rem*rem*rem);
+    n=Math.floor(n/10);
+}
+if(sum===count){
+    console.log('true');
+}
+else{
+  console.log('false');  
+}
+
+//Task-7
+var n=123;
+var sum=0
+while(n!==0){
+    var rem=n%10;
+    sum=sum*10+rem;
+    n=Math.floor(n/10);
+}
+console.log(sum);
+
+//Task-9
+var n=7;
+for(let i=1;i<=n;i+=2){
+    console.log(i);
+}
+
+//Task-10
+var n=125;
+for(let i=1;i*i*i<=n;i++){
+    console.log(i*i*i);
+}
+
+//Task-11
+var n=10;
+for(let i=2;i<=n;i+=2){
+    if(i%4===0){
+        continue;
+    }
+    console.log(i);
+}
+
+//Task-12
+let n=10,m=4;
+let i=1;
+while(i<=n){
+    if(i===m){
+        break;
+    }
+    console.log(i);
+    i++;
+}
+
+//Task-14
+for(let i=1;i<=5;i++){
+    let str='';
+    for(let j=1;j<=6-i;j++){
+        str=str+'*';
+    }
+    console.log(str);
+}
+
+//Task-15
+let i=1;
+while(i<=5){
+    let str='';
+    let j=1;
+    while(j<=6-i){
+        str=str+'*';
+        j++;
+    }
+    console.log(str);
+    i++;
+}
+
+//Task-16
+for(let i=1;i<=10;i++){
+    let str='';
+    for(let j=1;j<=6-i;j++){
+        str=str+'*';
+    }
+    for(let j=1;j<=i-5;j++){
+        str=str+'*';
+    }
+    console.log(str);
+}
+
+ //Task-17
+ for(let i=1;i<=5;i++){
+     let str='';
+     for(let j=1;j<=i;j++){
+         str=str+'*';
+     }
+     for(let j=1;j<=5-i;j++){
+         str=str+' ';
+     }
+     for(let j=1;j<=i;j++){
+         str=str+'*';
+     }
+     console.log(str);
+ }
+ 
+  //Task-18
+ let i=1;
+ while(i<=10){
+     let str='';
+     let j=1;
+     while(j<=6-i){
+         str=str+"*";
+         j++;
+     }
+     let k=1;
+     while(k<=i-5){
+         str=str+'*';
+         k++;
+     }
+     console.log(str);
+     i++;
+ }
+ 
+  //Task-19
+for(int i=1;i<=5;i++)
+{
+for(int j=1;j<=5;j++)
+{
+System.out.println(j);
+}
+}
+Answer-30 times
