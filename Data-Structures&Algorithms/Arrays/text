@@ -1,1 +1,58 @@
+//Task-3
+To store elements in an array
+//1st way
+var size=5;
+var arr=new Array(size);
+for(let i=0;i<arr.length;i++){
+    arr[i]=i+1;
+}
+console.log(arr);
 
+//2nd way
+var arr=[1,2,3,4,5];
+console.log(arr);
+
+//3rd way
+var arr= new Array(1,2,3,4,5);
+console.log(arr);
+
+//Task-4
+var arr=[5,4,7,2,6];
+let max=arr[0];
+for(let i=1;i<arr.length;i++){
+    if(arr[i]>max){
+        max=arr[i];
+    }
+}
+console.log(max);
+
+//Task-5
+var arr=[5,4,7,2,6];
+let min=arr[0];
+for(let i=1;i<arr.length;i++){
+    if(arr[i]<min){
+        min=arr[i];
+    }
+}
+console.log(min);
+
+//Task-6
+var count=5,flag,iter=0;
+var start=0;
+var number=2;
+var arr=new Array(count);
+while(start<count){
+      flag=true;
+    for(let i=2;i<number;i++){
+        if(number%i===0){
+            flag=false;
+        }
+    }
+    if(flag){
+    arr[iter]=number;
+    iter++;
+    start++;
+    }
+    number++;
+}
+console.log(arr);
