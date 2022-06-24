@@ -69,4 +69,115 @@ for(let i=0;i<arr.length;i++){
   }
 }
 
+//Task-9
+var arr=[5,2,-4,-5, 3,-1,2,3,1];
+var max_sum=arr[0];
+for(let i=0;i<arr.length;i++){
+    let prev_sum=0;
+    for(let j=i;j<arr.length;j++){
+        prev_sum=prev_sum+arr[j];
+        if(prev_sum>max_sum){
+            max_sum=prev_sum;
+        }
+    }
+}
+console.log(max_sum);
+
+//Task-10
+var runningSum = function(nums) {
+    let sum=0;
+    let runningSu=[];
+  for(let i=0;i<nums.length;i++){
+      runningSu[i]=sum+nums[i];
+      sum=runningSu[i];
+  }
+    return runningSu;
+};
+
+//Task-11
+var maximumWealth = function(accounts) {
+let max_sum=0,sum;  
+  for(let i=0;i<accounts.length;i++){
+      sum=0;
+   for(let j=0;j<accounts[i].length;j++){
+       sum=sum+accounts[i][j];
+   }
+      if(sum>max_sum){
+          max_sum=sum;
+      }
+  }
+  return max_sum;  
+};
+
+//Task-12
+var sumOddLengthSubarrays = function(arr) {
+let sum=0;
+for(let i=0;i<arr.length;i++){
+    for(let j=i;j<arr.length;j+=2){
+        for(let k=i;k<=j;k++){
+            sum=sum+arr[k];
+        }
+    }
+}
+return sum; 
+};
+
+//Task-13
+var rotate = function(nums, k) {
+    k=k%nums.length;
+    reverse(nums,0,nums.length-1); //rotate whole array
+    reverse(nums,0,k-1);    //rotate first half
+    reverse(nums,k,nums.length-1); //rotate last half   
+};
+function reverse(nums,r,l){
+    while(r<l){
+        let temp=nums[r];
+        nums[r]=nums[l];
+        nums[l]=temp;
+        r++;
+        l--;
+    }
+}
+
+//Task-15
+var arr=[4,3,2,5,1];
+for(let i=0;i<arr.length;i++){
+    for(let j=0;j<arr.length;j++){
+        if(arr[j]<arr[j+1]){
+            let temp=arr[j];
+            arr[j]=arr[j+1];
+            arr[j+1]=temp;
+        }
+    }
+}
+console.log(arr);
+
+//Task-16
+var arr=[4,3,2,5,1];
+for(let i=1;i<arr.length;i++){
+    let current=arr[i];
+    let j=i;
+    while(current>arr[j-1]){
+        arr[j]=arr[j-1];
+        j--;
+    }
+    arr[j]=current;
+}
+console.log(arr);
+
+//Task-17
+var arr=[4,3,2,5,1];
+for(let i=0;i<arr.length;i++){
+    let min=i;
+    for(let j=i+1;j<arr.length;j++){
+        if(arr[j]>arr[min]){
+            min=j;
+        }
+    }
+    let temp=arr[i];
+    arr[i]=arr[min];
+    arr[min]=temp;
+}
+console.log(arr);
+
 
